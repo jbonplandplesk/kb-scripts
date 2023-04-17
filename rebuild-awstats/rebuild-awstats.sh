@@ -411,7 +411,7 @@ for domain in $domains ; do
 	
 	
 		# determine logs' date boundaries
-		log_first_rec_dtime=`head -n 1 $http_log | awk -F'[[/:]' '{print $3,$2,$4}'`
+		log_first_rec_dtime=`head -n 1 $https_log | awk -F'[[/:]' '{print $3,$2,$4}'`
 		log_begin_date=`date -d "$log_first_rec_dtime" +%m/%Y`
 		date_range=`make_date_range "$log_begin_date-$(date +%m/%Y)"`
 
